@@ -16,7 +16,7 @@ function init() {
     inquirer.prompt(questions)
     .then((inquirerAnswers, data) => {   
         console.log("Creating ReadME file");
-        fs.writeFileSync("ReadMe.md", inquirerAnswers, data);
+        // fs.writeFileSync("ReadMe.md", inquirerAnswers, data);
     })
     .catch((err) => {
         console.log(err);
@@ -29,7 +29,6 @@ init();
 
 
 
-
 const promptUser = () =>
     inquirer.prompt([
         {
@@ -39,23 +38,48 @@ const promptUser = () =>
         },
         {
             type: 'input',
-            message: 'What is your location?',
-            name: 'location',
+            message: 'What is your project title?',
+            name: 'title',
         },
         {
             type: 'input',
-            message: 'What hobbies do you have?',
-            name: 'hobbies',
+            message: 'Write a description of your project.',
+            name: 'description',
         },
         {
             type: 'input',
-            message: 'What is your LinkedIn URL?',
+            message: 'What should be included in your Table of Contents?',
             name: 'linkedin',
         },
         {
             type: 'input',
-            message: 'What is your Github username?',
+            message: 'What are the requirements for installation?',
             name: 'github',
+        }, 
+        {
+            type: 'input',
+            message: 'How will this project be used?',
+            name: 'usage',
+        }, 
+        {
+            type: 'input',
+            message: 'What license does this app use?',
+            name: 'license',
+        }, 
+        {
+            type: 'input',
+            message: 'Who contributed to this project?',
+            name: 'contributors',
+        }, 
+        {
+            type: 'input',
+            message: 'What tests are included with this application?',
+            name: 'test',
+        }, 
+        {
+            type: 'input',
+            message: 'What is your contact information?',
+            name: 'questions',
         }
 
     ]);
