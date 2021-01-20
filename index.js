@@ -96,9 +96,9 @@ const init = async () => {
 
         const markdown = generateMarkdown(answers);
 
-        await writeFileAsync('READMe.md', markdown);
+        await writeFileAsync('README.md', markdown);
 
-        console.log('Successfully wrote to READme');
+        console.log('Successfully wrote to README');
     } catch (err) {
         console.log(err);
     }
