@@ -34,15 +34,19 @@ const questions = () => {
             type: 'checkbox',
             message: 'What license does this app have?',
             name: 'license',
-            choices: ["MIT", 
-            "ISC", 
-            ""]
+            choices: [
+                "MIT", 
+                "ISC", 
+                "Apache 2.0", 
+                "GNU GPLv3", 
+                "BSD", 
+            ]
         },
-        {
-            type: 'input',
-            message: 'If you would like to include a license badge, add the URL here.',
-            name: 'badge',
-        },
+        // {
+        //     type: 'input',
+        //     message: 'If you would like to include a license badge, add the URL here.',
+        //     name: 'badge',
+        // },
         {
             type: 'input',
             message: 'Who contributed to this project?',
