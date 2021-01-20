@@ -40,6 +40,7 @@ const questions = () => {
                 "Apache 2.0", 
                 "GNU GPLv3", 
                 "BSD", 
+                "None",
             ]
         },
         // {
@@ -78,10 +79,10 @@ const questions = () => {
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, answers) {
+// function writeToFile(fileName, answers) {
 
 
-};
+// };
 
 
 
@@ -93,7 +94,7 @@ const init = async () => {
     try {
         const answers = await questions();
 
-        const markdown = generatemarkdown(data);
+        const markdown = generateMarkdown(answers);
 
         await writeFileAsync('READMe.md', markdown);
 
