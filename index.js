@@ -91,9 +91,9 @@ function writeToFile(fileName, answers) {
 const init = async () => {
     console.log('work');
     try {
-        const answers = await promptUser();
+        const answers = await questions();
 
-        const markdown = generatemarkdown(answers);
+        const markdown = generatemarkdown(data);
 
         await writeFileAsync('READMe.md', markdown);
 
