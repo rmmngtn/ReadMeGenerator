@@ -1,31 +1,31 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-const renderLicenseBadge = (license) => {
-  if (data.license === "MIT") {
-    data.license = mit; 
-  }
-  else if (data.license === "ISC") { 
-    data.license = isc; 
-  }
-  else if (data.license === "Apache 2.0") { 
-    data.license = apache 
-  }
-  else if (data.license === "GNU GPLv3") { 
-    data.license = GPLv3;  
-  }
-  else if (data.license === "BSD") { 
-    data.license = bsd; 
-  }
-  else if (data.license === "None") { 
-    return "" }
+// // If there is no license, return an empty string
+// const renderLicenseBadge = (license) => {
+//   if (data.license === "MIT") {
+//     data.license = mit; 
+//   }
+//   else if (data.license === "ISC") { 
+//     data.license = isc; 
+//   }
+//   else if (data.license === "Apache 2.0") { 
+//     data.license = apache 
+//   }
+//   else if (data.license === "GNU GPLv3") { 
+//     data.license = GPLv3;  
+//   }
+//   else if (data.license === "BSD") { 
+//     data.license = bsd; 
+//   }
+//   else if (data.license === "None") { 
+//     return "" }
 
-};
+// };
 
 
 
 
 // TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// // If there is no license, return an empty string
 // const renderLicenseLink = () => {
 //   if (data.licence === "MIT") { return "(https://opensource.org/licenses/MIT)" };
 //   if (data.license === "ISC") { return "(https://opensource.org/licenses/ISC)" };
@@ -53,60 +53,53 @@ const renderLicenseBadge = (license) => {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
-  # ${data.title} 
-  [![License: ${liscBadge}]
+  # ${data.title}
 
-  ### ${data.description}
-    
-  ## Table of Contents
-  ----
-  1. [Description](#description)
-  2. [Installation](#installation)
-  3. [Usage](#usage)
-  4. [License](#license)
-  5. [Contributors](#contributors)
-  6. [Testing](#testing)
-  7. [Contact](#contact)
-    
-  <br>
-    
-  ## Installation 
-    ----
-  ${data.install}
-    
-  <br>
-    
-  ## Usage
-  ----
-  ${data.usage}
-    
-  <br>
-    
-  ## License
-  ----
-  #### This project is licensed under the terms of the ${data.license} license. Full license here ${liscLink}. 
 
-    
-  <br>
-    
-  ## Contributors
-  ----
-  ${data.contributors}
-    
-  <br>
-    
-  ## Testing
-  ----
-  ${data.test}
-    
-  <br>
-    
-    
-    
-  ## Contact Me
-  ----
-  - <https://github.com/${data.github}>
-  - <${data.email}>
+## Description
+​${data.description} 
+
+## Table of Contents 
+​
+* [Installation](#installation)
+​
+* [Usage](#usage)
+​
+* [License](#license)
+​
+* [Contributing](#contributing)
+​
+* [Tests](#tests)
+​
+* [Questions](#questions)
+​
+## Installation
+​
+To install necessary dependencies, run the following command:
+​
+${data.install}
+
+## Usage
+​
+Use git clone to pull down the repository. 
+​
+## License
+​
+${data.license}
+  
+## Contributing
+​
+${data.contribute} can contribute to this repository. 
+​
+## Tests
+​
+This project uses the ${data.test} test. 
+​
+## Questions
+​
+If you have any questions, please contact me directly at <${data.email}>.
+More of my work can be found at [rmmngtn](https://github.com/${data.github}).
+
   `;
 
 

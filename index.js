@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-const generateMarkdown = require('./utils/generateMarkdown');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 
 const writeFileAsync = util.promisify(fs.writeFile);
@@ -17,17 +17,17 @@ const questions = () => {
         },
         {
             type: 'input',
-            message: 'Write a description of your project.',
+            message: 'Write a brief description of your project.',
             name: 'description',
         },
         {
             type: 'input',
-            message: 'What are the requirements for installation?',
+            message: 'What installation steps are required for this project?',
             name: 'install',
         },
         {
             type: 'input',
-            message: 'How will this project be used?',
+            message: 'How can others use this project?',
             name: 'usage',
         },
         {
@@ -37,25 +37,19 @@ const questions = () => {
             choices: [
                 "MIT", 
                 "ISC", 
-                "Apache 2.0", 
-                "GNU GPLv3", 
+                "Apache 2.0",  
                 "BSD", 
                 "None",
             ]
         },
-        // {
-        //     type: 'input',
-        //     message: 'If you would like to include a license badge, add the URL here.',
-        //     name: 'badge',
-        // },
         {
             type: 'input',
-            message: 'Who contributed to this project?',
-            name: 'contributors',
+            message: 'Who can contribute to this project?',
+            name: 'contribute',
         },
         {
             type: 'input',
-            message: 'What tests are required with this application?',
+            message: 'What tests does this project use?',
             name: 'test',
         },
         {
@@ -67,13 +61,7 @@ const questions = () => {
             type: 'input',
             message: 'What is your email?',
             name: 'email',
-        },
-        {
-            type: 'input',
-            message: 'How would you prefer to be contacted?',
-            name: 'contact',
         }
-
     ]);
 };
 
