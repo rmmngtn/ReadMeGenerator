@@ -46,8 +46,7 @@ const generateMarkdown = (answers) => {
   const license = answers.license; 
   const licenseInfo = renderLicenseSection(license); 
 
-  return `
-  # ${answers.title}
+  return `# ${answers.title}
  
    
 
